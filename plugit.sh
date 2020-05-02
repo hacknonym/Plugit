@@ -263,6 +263,7 @@ resize -s 23 84 1> /dev/null
 mkdir $CURRENT_PATH/output/ 1> /dev/null 2>&1
 mkdir $CURRENT_PATH/output/enumerate_system/ 1> /dev/null 2>&1
 mkdir $CURRENT_PATH/output/network_scan/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/searchfile/output/ 1> /dev/null 2>&1
 rm $CURRENT_PATH/output/search_files
 ln -s $CURRENT_PATH/searchfile/output/ $CURRENT_PATH/output/search_files
 
