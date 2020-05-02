@@ -14,6 +14,8 @@ blueb='\e[0;34;1m'
 
 CURRENT_PATH=$(pwd)
 
+mkdir $CURRENT_PATH/output/ 1> /dev/null 2>&1
+
 function type(){
   type_element=$(file "$1" | cut -d ':' -f 2 | cut -c 2-)
   if [ "$type_element" = "directory" ] ; then
