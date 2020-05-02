@@ -19,7 +19,7 @@ ping -c 1 8.8.4.4 1> /dev/null 2>&1 || { echo -e "$redb[x]$grey No Internet conn
 cd $CURRENT_PATH
 
 chmod +x $CURRENT_PATH/wifipass/wifipass.sh
-chmod +x $CURRENT_PATH/searchfile//searchfile/.sh
+chmod +x $CURRENT_PATH/searchfile/searchfile/.sh
 
 echo -e "$greenb[+]$grey [1/$TOTAL] LaZagne local installation..."
 git clone --quiet https://github.com/AlessandroZ/LaZagne.git
