@@ -58,7 +58,7 @@ cd Plugit
 
 ## Tools Overview
 ![Launch](https://user-images.githubusercontent.com/55319869/80914392-87491a00-8d4b-11ea-92a3-79fa268f2ce1.png)
-![Search files](https://user-images.githubusercontent.com/55319869/80914399-8fa15500-8d4b-11ea-80a5-ca88e3480b1f.png)
+![Search files](https://user-images.githubusercontent.com/55319869/80914426-b2336e00-8d4b-11ea-9954-c637b37444de.png)
 ![Destroy system](https://user-images.githubusercontent.com/55319869/80914399-8fa15500-8d4b-11ea-80a5-ca88e3480b1f.png)
 
 ## License
