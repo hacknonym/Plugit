@@ -50,5 +50,5 @@ git clone --quiet https://github.com/nmap/nmap.git
 cd nmap/
 ./configure 1> /dev/null 2>&1
 make 1> /dev/null 2>&1
-make 1> /dev/null 2>&1
+make install 1> /dev/null 2>&1
 cd $CURRENT_PATH

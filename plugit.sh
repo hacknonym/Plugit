@@ -274,12 +274,12 @@ $white 2$grey) :: Search important files  (->$yellow output/search_files/ $grey)
 $white 3$grey) :: Scan the network $cyan(nmap)$grey (->$yellow output/network_scan/ $grey)
 $white 4$grey) :: $redb(RP)$grey Create an admin user
 $white 5$grey) :: Change the password of the current user
-$white 6$grey) :: $redb(RP)$grey Create an SSH server
+$white 6$grey) :: $redb(RP)$grey Install an SSH server
 $white 7$grey) :: Destroy system
 $white 8$grey) :: Clear logs
 $white 9$grey) :: $redb(RP)$grey Reset BIOS $cyan(cmospwd)$grey
 """
-echo -ne "$greyi/PA$grey"
+echo -ne "$greyi/plugit$grey"
 read -p "> " -n 1 -e option
 
 case $option in
