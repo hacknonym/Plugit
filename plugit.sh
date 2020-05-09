@@ -34,7 +34,7 @@ CURRENT_PATH=$(pwd)
 PROG_NAME="plugit.sh"
 
 function enumerate_system(){
-  TOTAL=5
+  TOTAL=7
 
   echo -e "$greenb[+]$grey Remove old output files..."
   rm -f $CURRENT_PATH/output/enumerate_system/wifipass/*
@@ -42,21 +42,31 @@ function enumerate_system(){
   rm -f $CURRENT_PATH/output/enumerate_system/linPEAS/*
   rm -f $CURRENT_PATH/output/enumerate_system/LinEnum/*
   rm -f $CURRENT_PATH/output/enumerate_system/mimipenguin/*
+  rm -f $CURRENT_PATH/output/enumerate_system/linuxprivchecker/*
+  rm -f $CURRENT_PATH/output/enumerate_system/linux-exploit-suggester/*
 
-  echo -en "$greenb[+]$grey Launch wifipass.sh...\t[1/$TOTAL]"
-  bash $CURRENT_PATH/wifipass/wifipass.sh > $CURRENT_PATH/output/enumerate_system/wifipass/credentials.txt 2>&1
+  echo -e "$blueb[*]$grey Launch wifipass.sh...\t[1/$TOTAL]"
+  bash $CURRENT_PATH/wifipass/wifipass.sh > $CURRENT_PATH/output/enumerate_system/wifipass/credentials.txt 2>&1 &
 
-  echo -en "\r$greenb[+]$grey Launch laZagne.py...\t[2/$TOTAL]"
-  python $CURRENT_PATH/LaZagne/Linux/laZagne.py all > $CURRENT_PATH/output/enumerate_system/lazagne/credentials.txt 2>&1
+  echo -e "$blueb[*]$grey Launch laZagne.py...\t[2/$TOTAL]"
+  python $CURRENT_PATH/LaZagne/Linux/laZagne.py all > $CURRENT_PATH/output/enumerate_system/lazagne/credentials.txt 2>&1 &
 
-  echo -en "\r$greenb[+]$grey Launch linpeas.sh...\t[3/$TOTAL]"
-  bash $CURRENT_PATH/privilege-escalation-awesome-scripts-suite/linPEAS/linpeas.sh > $CURRENT_PATH/output/enumerate_system/linPEAS/credentials.txt 2>&1
+  echo -e "$blueb[*]$grey Launch linpeas.sh...\t[3/$TOTAL]"
+  bash $CURRENT_PATH/privilege-escalation-awesome-scripts-suite/linPEAS/linpeas.sh > $CURRENT_PATH/output/enumerate_system/linPEAS/credentials.txt 2>&1 &
 
-  echo -en "\r$greenb[+]$grey Launch LinEnum.sh...\t[4/$TOTAL]"
-  bash $CURRENT_PATH/LinEnum/LinEnum.sh > $CURRENT_PATH/output/enumerate_system/LinEnum/credentials.txt 2>&1
+  echo -e "$blueb[*]$grey Launch LinEnum.sh...\t[4/$TOTAL]"
+  bash $CURRENT_PATH/LinEnum/LinEnum.sh > $CURRENT_PATH/output/enumerate_system/LinEnum/credentials.txt 2>&1 &
 
-  echo -e "\r$greenb[+]$grey Launch mimipenguin.sh..\t[5/$TOTAL]"
-  bash $CURRENT_PATH/mimipenguin/mimipenguin.sh > $CURRENT_PATH/output/enumerate_system/mimipenguin/credentials.txt 2>&1
+  echo -e "$blueb[*]$grey Launch mimipenguin.sh..\t[5/$TOTAL]"
+  bash $CURRENT_PATH/mimipenguin/mimipenguin.sh > $CURRENT_PATH/output/enumerate_system/mimipenguin/credentials.txt 2>&1 &
+
+  echo -e "$blueb[*]$grey Launch linuxprivchecker.py..[6/$TOTAL]"
+  python $CURRENT_PATH/linuxprivchecker/linuxprivchecker.py > $CURRENT_PATH/output/enumerate_system/linuxprivchecker/credentials.txt 2>&1 &
+
+  echo -e "$blueb[*]$grey Launch linux-exploit-suggester.sh...\t[7/$TOTAL]"
+  bash $CURRENT_PATH/linux-exploit-suggester/linux-exploit-suggester.sh > $CURRENT_PATH/output/enumerate_system/linux-exploit-suggester/credentials.txt 2>&1 &
+
+  echo -e "$greenb[+]$grey Programs launch in background"
 }
 
 function destroy_system(){
@@ -262,6 +272,13 @@ resize -s 23 84 1> /dev/null
 
 mkdir $CURRENT_PATH/output/ 1> /dev/null 2>&1
 mkdir $CURRENT_PATH/output/enumerate_system/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/wifipass/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/lazagne/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/linPEAS/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/LinEnum/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/mimipenguin/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/linuxprivchecker/ 1> /dev/null 2>&1
+mkdir $CURRENT_PATH/output/enumerate_system/linux-exploit-suggester/ 1> /dev/null 2>&1
 mkdir $CURRENT_PATH/output/network_scan/ 1> /dev/null 2>&1
 mkdir $CURRENT_PATH/searchfile/output/ 1> /dev/null 2>&1
 rm $CURRENT_PATH/output/search_files

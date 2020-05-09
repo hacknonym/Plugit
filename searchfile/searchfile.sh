@@ -26,7 +26,7 @@ function type(){
 }
 
 function search(){
-  for element in $(ls -lF "$1" | grep -e ":" | cut -d ':' -f 2 | cut -c 4- | tr ' ' 'µ') ; do
+  for element in $(ls -1F "$1" | tr ' ' 'µ') ; do
     correct_element=$(echo -e "$element" | tr 'µ' ' ')
     type "$1/$correct_element"
     if [ $? -eq 1 ] ; then
@@ -42,7 +42,7 @@ function search(){
 }
 
 function folder_func(){
-  for folder in $(ls -lF "$1" | grep -e ":" | cut -d ':' -f 2 | cut -c 4- | tr ' ' 'µ') ; do
+  for folder in $(ls -1F "$1" | tr ' ' 'µ') ; do
     correct_folder=$(echo -e "$folder" | tr 'µ' ' ')
     type "$1$correct_folder"
     if [ $? -eq 1 ] ; then
@@ -131,7 +131,7 @@ rm -f $CURRENT_PATH/output/*.nse
 
 number_file=$(
   c=0
-  for i in $(ls -lA $CURRENT_PATH/output/ | grep -e ":" | cut -d ':' -f 2 | cut -c 4-) ; do
+  for i in $(ls -1A $CURRENT_PATH/output/ | tr ' ' 'µ') ; do
     c=$(($c + 1))
   done
   echo -e "$c"
@@ -156,7 +156,7 @@ if [[ $option =~ ^[YyOo]$ ]] ; then
 
   number_file=$(
     c=0
-    for i in $(ls -lA $CURRENT_PATH/output/ | grep -e ":" | cut -d ':' -f 2 | cut -c 4-) ; do
+    for i in $(ls -1A $CURRENT_PATH/output/ | tr ' ' 'µ') ; do
       c=$(($c + 1))
     done
     echo -e "$c"

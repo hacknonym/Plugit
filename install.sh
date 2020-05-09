@@ -12,14 +12,14 @@ yellowb='\e[0;33;1m'
 blueb='\e[0;34;1m'
 
 CURRENT_PATH=$(pwd)
-TOTAL=7
+TOTAL=9
 
 ping -c 1 8.8.4.4 1> /dev/null 2>&1 || { echo -e "$redb[x]$grey No Internet connection"; exit 1; }
 
 cd $CURRENT_PATH
 
 chmod +x $CURRENT_PATH/wifipass/wifipass.sh
-chmod +x $CURRENT_PATH/searchfile/searchfile/.sh
+chmod +x $CURRENT_PATH/searchfile/searchfile.sh
 
 echo -e "$greenb[+]$grey [1/$TOTAL] LaZagne local installation..."
 git clone --quiet https://github.com/AlessandroZ/LaZagne.git
@@ -33,19 +33,28 @@ git clone --quiet https://github.com/huntergregal/mimipenguin.git
 echo -e "$greenb[+]$grey [4/$TOTAL] LinEnum local installation..."
 git clone --quiet https://github.com/rebootuser/LinEnum.git
 
-echo -e "$greenb[+]$grey [5/$TOTAL] cmospwd local installation..."
+echo -e "$greenb[+]$grey [5/$TOTAL] linuxprivchecker local installation..."
+mkdir $CURRENT_PATH/linuxprivchecker
+cd linuxprivchecker/
+wget www.securitysift.com/download/linuxprivchecker.py 1> /dev/null 2>&1
+cd $CURRENT_PATH
+
+echo -e "$greenb[+]$grey [6/$TOTAL] linux-exploit-suggester local installation..."
+git clone --quiet https://github.com/mzet-/linux-exploit-suggester.git
+
+echo -e "$greenb[+]$grey [7/$TOTAL] cmospwd local installation..."
 git clone --quiet https://github.com/foreni-packages/cmospwd.git
 cd cmospwd/src/
 make 1> /dev/null 2>&1
 cd $CURRENT_PATH
 
-echo -e "$greenb[+]$grey [6/$TOTAL] crunch local installation..."
+echo -e "$greenb[+]$grey [8/$TOTAL] crunch local installation..."
 git clone --quiet https://github.com/crunchsec/crunch.git
 cd crunch/
 make 1> /dev/null 2>&1
 cd $CURRENT_PATH
 
-echo -e "$greenb[+]$grey [7/$TOTAL] nmap local installation..."
+echo -e "$greenb[+]$grey [9/$TOTAL] nmap local installation..."
 git clone --quiet https://github.com/nmap/nmap.git
 cd nmap/
 ./configure 1> /dev/null 2>&1
