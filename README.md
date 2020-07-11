@@ -29,6 +29,7 @@ The principle of a physical attack consists in connecting a rogue device directl
 	* Enumeration of the system
 	* Search important files using keywords
 	* Scan the network
+	* Privileges escalation
 	* Destroy system 
 	* Create an admin user
 	* Change the password of the current user
