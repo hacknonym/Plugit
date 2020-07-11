@@ -1,8 +1,8 @@
 # Plugit
 
-[![License](https://img.shields.io/badge/License-GPL%20v3%2B-red.svg?style=for-the-badge)]()
-[![Available](https://img.shields.io/badge/Available-Debian-orange.svg?style=for-the-badge)]()
-[![Available](https://img.shields.io/badge/Available-Windows-blue.svg?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/License-GPL%20v3%2B-red.svg?style=for-the-badge)](https://github.com/hacknonym/Plugit/blob/master/LICENSE)
+[![Available](https://img.shields.io/badge/Available-Debian-orange.svg?style=for-the-badge)](https://github.com/hacknonym/Plugit/blob/master/LinPlugit)
+[![Available](https://img.shields.io/badge/Available-Windows-blue.svg?style=for-the-badge)](https://github.com/hacknonym/Plugit/blob/master/WinPlugit)
 
 ### Author: github.com/hacknonym
 
@@ -16,7 +16,7 @@
 The principle of a physical attack consists in connecting a rogue device directly to the target machine, the objective of which is to perform various actions such as collecting information or providing access from outside the building (wireless rogue AP), or even reset a device to known standard configurations that are not safe.
 
 ## Features !
-- **LinPlugit**
+- [**LinPlugit**](https://github.com/hacknonym/Plugit/blob/master/LinPlugit)
 	* Enumeration of the system
 	* Search important files using keywords
 	* Scan the network
@@ -27,7 +27,7 @@ The principle of a physical attack consists in connecting a rogue device directl
 	* Clear logs
 	* Reset BIOS
 
-- **WinPlugit**
+- [**WinPlugit**](https://github.com/hacknonym/Plugit/blob/master/WinPlugit)
 	* Enumeration of the system
 	* Search important files using keywords
 	* Scan the network
