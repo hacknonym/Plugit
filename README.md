@@ -1,6 +1,8 @@
 # Plugit
 
 [![License](https://img.shields.io/badge/License-GPL%20v3%2B-red.svg?style=for-the-badge)]()
+[![Available](https://img.shields.io/badge/Available-Debian-orange.svg?style=for-the-badge)]()
+[![Available](https://img.shields.io/badge/Available-Windows-blue.svg?style=for-the-badge)]()
 
 ### Author: github.com/hacknonym
 
