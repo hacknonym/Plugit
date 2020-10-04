@@ -30,7 +30,7 @@
 - Scan the network [IPv4NetworkScanner](https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner)
 - Privileges escalation
 	* [Exploits](https://github.com/WindowsExploits/Exploits) (CVE-2012-0217, CVE-2016-3309, CVE-2016-3371, CVE-2016-7255, CVE-2017-0213)
-- Destroy system
+- Destroy system (not yet functional)
 - Create an admin user
 - Change the password of the current user
 - Install programs
